@@ -1,0 +1,23 @@
+# Entorno virtual
+venv/
+env/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Configs editores
+.vscode/
+.idea/
+
+# Modelos binarios
+*.pt
+*.onnx
+*.tflite
+
+# Sistema
+.DS_Store
+Thumbs.db
