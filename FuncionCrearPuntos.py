@@ -181,16 +181,13 @@ class RobotMoveWriter:
         }
 
     # --------------------------------------------------
-    # Interpolaciones (MISMAS funciones, ahora métodos)
+    # Interpolaciones (delegating to module-level functions)
     # --------------------------------------------------
     def bilinear_interpolation(self, c1, c2, c3, c4, u, v):
-        return (c1 * (1 - u) * (1 - v) +
-                c2 * u * (1 - v) +
-                c3 * (1 - u) * v +
-                c4 * u * v)
+        return bilinear_interpolation(c1, c2, c3, c4, u, v)
 
     def linear_interpolation(self, p_start, p_end, v):
-        return p_start * (1 - v) + p_end * v
+        return linear_interpolation(p_start, p_end, v)
 
     # --------------------------------------------------
     # Conversión chess → mm (MISMA lógica)

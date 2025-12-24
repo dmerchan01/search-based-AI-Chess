@@ -38,5 +38,5 @@ Thumbs.db
 *.orig
 
 # === Robot output files ===
-X:\EpsonRC70/
+**/EpsonRC70/
 EpsonRC70/
