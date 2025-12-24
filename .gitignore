@@ -1,35 +1,22 @@
-# === Python & VSCode ===
+# === Python ===
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.log
-*.sqlite3
-*.db
-*.bak
-*.swp
-*.swo
-*.tmp
-.gitignore
+*.py[cod]
+
 # === Virtual environments ===
 venv/
 .venv/
 
 # === VS Code ===
-.vscode/settings.json
+.vscode/
 
-# === OS-specific files ===
+# === Project outputs / unwanted files ===
+*.pgn
+*.txt
+!requirements.txt
+
+# (si quieres ignorar positions.json también)
+positions.json
+
+# === OS files ===
 .DS_Store
 Thumbs.db
-
-# === Heroku or build caches ===
-*.pid
-*.seed
-*.log
-
-# === Gitignore global patterns ===
-*.orig
-
-# === Random files ===
-game.pgn
-positions.json
