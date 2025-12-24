@@ -10,7 +10,8 @@ __pycache__/
 *.swp
 *.swo
 *.tmp
-*.vscode
+.vscode/extensions.json
+.vscode/extensions.json
 
 # === Virtual environments ===
 venv/
