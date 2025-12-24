@@ -36,3 +36,6 @@ Thumbs.db
 
 # === Gitignore global patterns ===
 *.orig
+
+# === Robot output files ===
+X:\EpsonRC70\Projects\chess_arm_robot/

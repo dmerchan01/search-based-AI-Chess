@@ -1,4 +1,16 @@
+import numpy as np
+import os
 
+
+def bilinear_interpolation(c1, c2, c3, c4, u, v):
+    """
+    Bilinear interpolation for a 2D grid.
+    c1, c2, c3, c4 are corner points, u and v are interpolation factors.
+    """
+    return (c1 * (1 - u) * (1 - v) +
+            c2 * u * (1 - v) +
+            c3 * (1 - u) * v +
+            c4 * u * v)
 
 def linear_interpolation(p_start, p_end, v):
     return p_start * (1 - v) + p_end * v
@@ -106,13 +118,9 @@ def generar_archivo_robot(cadena_movimientos, tipo_movimiento):
 
     for i in range(0, len(cadena_movimientos), 2):
         casilla = cadena_movimientos[i : i+2]
-        try:
-            punto = chess_to_mm(casilla)
-            # Escribimos X, Y, Z (3 valores)
-            lista_coordenadas.append(f"{punto[0]:.2f},{punto[1]:.2f},{punto[2]:.2f}")
-        except Exception as e:
-            print(f"Error procesando '{casilla}': {e}")
-            return
+        punto = chess_to_mm(casilla)
+        # Escribimos X, Y, Z (3 valores)
+        lista_coordenadas.append(f"{punto[0]:.2f},{punto[1]:.2f},{punto[2]:.2f}")
 
     try:
         with open(ruta_completa, "w") as f:
@@ -124,9 +132,6 @@ def generar_archivo_robot(cadena_movimientos, tipo_movimiento):
 if __name__ == "__main__":
     # Prueba: Movimiento del tablero (z=143) a zona externa (z=118)
     generar_archivo_robot("f2l1n8f1", 2)
-
-import numpy as np
-import os
 
 
 class RobotMoveWriter:
@@ -260,10 +265,14 @@ class RobotMoveWriter:
 
         for i in range(0, len(cadena_movimientos), 2):
             casilla = cadena_movimientos[i:i+2]
-            punto = self.chess_to_mm(casilla)
-            lista_coordenadas.append(
-                f"{punto[0]:.2f},{punto[1]:.2f},{punto[2]:.2f}"
-            )
+            try:
+                punto = self.chess_to_mm(casilla)
+                lista_coordenadas.append(
+                    f"{punto[0]:.2f},{punto[1]:.2f},{punto[2]:.2f}"
+                )
+            except Exception as e:
+                print(f"Error procesando '{casilla}': {e}")
+                return
 
         try:
             with open(ruta_completa, "w") as f:
