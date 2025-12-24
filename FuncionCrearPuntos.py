@@ -1,4 +1,12 @@
+import numpy as np
+import os
 
+
+def bilinear_interpolation(c1, c2, c3, c4, u, v):
+    return (c1 * (1 - u) * (1 - v) +
+            c2 * u * (1 - v) +
+            c3 * (1 - u) * v +
+            c4 * u * v)
 
 def linear_interpolation(p_start, p_end, v):
     return p_start * (1 - v) + p_end * v
@@ -124,9 +132,6 @@ def generar_archivo_robot(cadena_movimientos, tipo_movimiento):
 if __name__ == "__main__":
     # Prueba: Movimiento del tablero (z=143) a zona externa (z=118)
     generar_archivo_robot("f2l1n8f1", 2)
-
-import numpy as np
-import os
 
 
 class RobotMoveWriter:
