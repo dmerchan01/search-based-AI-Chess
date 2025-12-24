@@ -271,7 +271,7 @@ class ChessGUI:
             fname = "promotion.txt"
         else:
             type = 3
-            fname = "captured_promotion.txt"
+            fname = "capture_promotion.txt"
 
         # Save current move filename
         self.current_move_filename = fname
