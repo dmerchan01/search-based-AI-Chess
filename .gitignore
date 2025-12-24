@@ -36,3 +36,9 @@ Thumbs.db
 
 # === Gitignore global patterns ===
 *.orig
+
+# === Robot generated files ===
+EpsonRC70/
+X:\EpsonRC70/
+*.txt
+!requirements.txt
