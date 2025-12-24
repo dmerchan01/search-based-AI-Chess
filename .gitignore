@@ -38,4 +38,7 @@ Thumbs.db
 *.orig
 
 # === Robot output files ===
-X:\EpsonRC70\Projects\chess_arm_robot/
+# Windows path creates literal directory on Linux
+X:\EpsonRC70\
+# Also ignore generated txt files in EpsonRC70 directory
+EpsonRC70/Projects/chess_arm_robot/*.txt
