@@ -3,6 +3,8 @@
 This project presents the development of an automated chess system that integrates a classical Artificial Intelligence (AI) chess engine with a graphical user interface and a robotic arm for 
 physical execution of chess moves. The system allows a human player to compete against the computer while each move is synchronized and executed by an industrial robotic arm EPSON.
 
+<img width="287" height="280" alt="robotic_arm" src="https://github.com/user-attachments/assets/2b2868c8-a988-4fb1-8d28-c0809d03ef34" />
+<img width="632" height="692" alt="interface" src="https://github.com/user-attachments/assets/49767d63-a89c-4b75-a844-a783c1858062" />
 
 ---
 
@@ -130,7 +132,7 @@ The system waits for confirmation (file deletion) before allowing the next turn,
    ```
 4. Run the '.spel' file on the EPSON program:
 5. Run the application after '.spel' file is running:
-  ```bash
+   ```bash
    python main.py
    ```
 
