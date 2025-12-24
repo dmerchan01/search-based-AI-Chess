@@ -50,6 +50,10 @@ The project is structured into modular components:
 - engine/search.py      
 - engine/recorder.py    
 - engine/robot_files.py
+  
+
+---
+
 
 ### Robotic Arm Integration
 
@@ -58,6 +62,9 @@ The robotic arm operates under an **asynchronous master–slave architecture**:
 - The robotic arm acts as the **slave**, executing moves based on generated text files.
 
 The system waits for confirmation (file deletion) before allowing the next turn, ensuring full synchronization between the digital game and the physical execution.
+
+
+---
 
 
 ### Features
