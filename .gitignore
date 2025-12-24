@@ -10,9 +10,7 @@ __pycache__/
 *.swp
 *.swo
 *.tmp
-.vscode/extensions.json
-.vscode/extensions.json
-
+.gitignore
 # === Virtual environments ===
 venv/
 .venv/
